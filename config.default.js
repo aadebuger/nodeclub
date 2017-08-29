@@ -28,17 +28,17 @@ var config = {
   // cdn host，如 http://cnodejs.qiniudn.com
   site_static_host: '', // 静态文件存储域名
   // 社区的域名
-  host: 'localhost',
+  host: '0.0.0.0',
   // 默认的Google tracker ID，自有站点请修改，申请地址：http://www.google.com/analytics/
   google_tracker_id: '',
   // 默认的cnzz tracker ID，自有站点请修改
   cnzz_tracker_id: '',
 
   // mongodb 配置
-  db: 'mongodb://127.0.0.1/node_club_dev',
+  db: 'mongodb://mongodb/node_club_dev',
 
   // redis 配置，默认是本地
-  redis_host: '127.0.0.1',
+  redis_host:  "redisdb",
   redis_port: 6379,
   redis_db: 0,
   redis_password: '',
