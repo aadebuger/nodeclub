@@ -3,6 +3,9 @@ services:
 
 
 
+ redisdb:
+    image: redis
+
  mongodata:  
     image: mongo
     volumes:
