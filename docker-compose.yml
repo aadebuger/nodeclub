@@ -23,6 +23,8 @@ services:
 
     ports:
       - "3000:3000"  
+    links:
+      - "redisdb:redisdb"
     environment:
       - MYDB_PORT_27017_TCP_ADDR=mongodb
       - LANG="en_US.UTF-8"
