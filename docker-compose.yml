@@ -1,0 +1,28 @@
+version: '2'
+services:
+
+
+
+ mongodata:  
+    image: mongo
+    volumes:
+       - /data/db
+    command: --break-mongo
+ mongodb:
+    image: mongo
+    volumes_from: 
+      - mongodata
+    ports:
+       - "27017:27017"
+
+ cnode:
+    image: nodeclub
+
+    ports:
+      - "3000:3000"  
+    environment:
+      - MYDB_PORT_27017_TCP_ADDR=mongodb
+      - LANG="en_US.UTF-8"
+      - PYTHONIOENCODING=UTF-8 
+    tty: true
+
