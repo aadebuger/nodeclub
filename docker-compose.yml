@@ -5,8 +5,8 @@ services:
 
  redisdb:
     image: redis
-    ports:
-      - "6379:6379"
+#    ports:
+#      - "6379"
  mongodata:  
     image: mongo
     volumes:
@@ -16,8 +16,8 @@ services:
     image: mongo
     volumes_from: 
       - mongodata
-    ports:
-       - "27017:27017"
+#    ports:
+#       - "27017"
 
  cnode:
     image: nodeclub
